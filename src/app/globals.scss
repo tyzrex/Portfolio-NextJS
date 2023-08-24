@@ -1,0 +1,197 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --dot-bg: #161616;
+  --dot-color: #867e7e;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+/* layouts designs and typography */
+@layer components {
+  .max-w-layout {
+    @apply 2xl:max-w-[1300px] max-w-[90vw] mx-auto;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-around {
+    @apply flex items-center justify-around;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-col0-start {
+    @apply flex flex-col items-start justify-center;
+  }
+
+  .title-typography {
+    @apply text-[20px] md: text-[26px] font-medium text-title-text;
+  }
+}
+
+@layer components {
+  .color-transition {
+    @apply transition-colors duration-500 ease-in-out;
+  }
+
+  .all-transition {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .mobile-nav-links {
+    @apply block p-4 text-sm font-semibold text-gray-700 hover: bg-accent-1 dark:hover:bg-gray-900 hover:text-white rounded-xl;
+  }
+
+  .button-hover {
+    @apply hover: bg-accent-1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #636363;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.nav-links {
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  &:active:after {
+    width: 100%;
+    left: 0;
+  }
+
+  &:hover {
+    color: orange;
+  }
+
+  &:active {
+    color: orange;
+  }
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #2c6bb3;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Style for table headers (th) */
+th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for alternating rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style for table data (td) */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style for the first column with headings */
+th[scope="row"] {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Style for the table caption */
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
