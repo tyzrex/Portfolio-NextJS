@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         "main" : "#161616",
         "secondary": "#333333",
-        "accent": "#ffa500",
-        "text-light": "#9a9a9a"
+        "accent": "#86c232",
+        "text-light": "#fff"
       },
       screens: {
         "2xl": "1536px",

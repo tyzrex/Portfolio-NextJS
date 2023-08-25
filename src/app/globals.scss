@@ -42,14 +42,43 @@ body {
     @apply flex flex-col items-center justify-center;
   }
 
-  .flex-col0-start {
-    @apply flex flex-col items-start justify-center;
+  .flex-col-start {
+    @apply flex flex-col items-center justify-start;
   }
 
-  .title-typography {
-    @apply text-[20px] md: text-[26px] font-medium text-title-text;
+}
+
+// Fonts and typography
+@layer components{
+  .font-big{
+    @apply text-[3.5rem];
+  }
+
+  .h1-font{
+    @apply text-[2.25rem];
+  }
+
+  .h2-font{
+    @apply text-[1.5rem];
+  }
+
+  .h3-font{
+    @apply text-[1.25rem];
+  }
+
+  .normal-font{
+    @apply text-base;
+  }
+
+  .small-font{
+    @apply text-sm;
+  }
+
+  .tiny-font{
+    @apply text-[0.625rem];
   }
 }
+
 
 @layer components {
   .color-transition {
@@ -68,6 +97,26 @@ body {
     @apply hover: bg-accent-1;
   }
 }
+
+
+@keyframes profile__animation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.profile__image {
+  animation: profile__animation 8s ease-in-out infinite 1s;
+}
+
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -102,7 +151,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: orange;
+    background-color: #c7ff1b;
     transition: all 0.3s ease-in-out;
   }
 
@@ -117,81 +166,11 @@ body {
   }
 
   &:hover {
-    color: orange;
+    color: #c7ff1b;
   }
 
   &:active {
-    color: orange;
+    color: #c7ff1b;
   }
 }
 
-.loader {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: inline-block;
-  border-top: 4px solid #2c6bb3;
-  border-right: 4px solid transparent;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-
-.loader::after {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border-left: 4px solid #FF3D00;
-  border-bottom: 4px solid transparent;
-  animation: rotation 0.5s linear infinite reverse;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-/* Style for table headers (th) */
-th {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: left;
-}
-
-/* Style for alternating rows */
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-/* Style for table data (td) */
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-/* Style for the first column with headings */
-th[scope="row"] {
-  background-color: #e0e0e0;
-  font-weight: bold;
-}
-
-/* Style for the table caption */
-caption {
-  font-weight: bold;
-  margin-bottom: 10px;
-}

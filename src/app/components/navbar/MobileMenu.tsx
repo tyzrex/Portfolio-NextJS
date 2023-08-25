@@ -7,6 +7,8 @@ import Image from "next/image";
 import classNames from "classnames";
 import { RiMenu4Fill } from "react-icons/ri";
 import { Navlinks } from "./Navbardata";
+import { TbBrandTorchain } from "react-icons/tb";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function MobileMenu(props: { className?: string }) {
   const [nav, setNav] = useState<Boolean>(false);
@@ -35,17 +37,23 @@ export default function MobileMenu(props: { className?: string }) {
 
   return (
     <header className={props.className}>
-      <div className="w-full items py-2 max-w-layout mx-auto">
+      <div className="w-full items py-5 max-w-layout mx-auto border-b border-b-gray-600">
         <div className="flex justify-between items-center w-full">
           <div className="logo flex justify-center items-center gap-4">
             <Link href="/">
-              <Image src={""} alt="logo" className="w-[150px]" />
+              <h1 className="text-2xl font-bold flex-center gap-2">
+                <TbBrandTorchain className="text-3xl text-accent" />
+                <span className="text-text-light">
+                  Sulav
+                  <span className=""> Baral</span>
+                </span>
+              </h1>
             </Link>
           </div>
 
           <div>
             <button className="navbar-open" onClick={handleNav}>
-              <RiMenu4Fill className="w-12 h-12 text-red-500" />
+              <RiMenu4Fill className="w-8 h-8 text-accent" />
             </button>
           </div>
         </div>
@@ -53,17 +61,25 @@ export default function MobileMenu(props: { className?: string }) {
       <div
         className={
           nav
-            ? "fixed top-0 left-0 w-full h-full bg-white z-50 overflow-y-auto transition-all duration-700 ease-in-out"
-            : "fixed top-0 left-0 w-full h-full bg-white z-50 overflow-y-auto transition-all duration-700 ease-in-out transform -translate-x-[100%]"
+            ? "fixed top-0 left-0 w-full h-full bg-main z-50 overflow-y-auto transition-all duration-700 ease-in-out"
+            : "fixed top-0 left-0 w-full h-full bg-main z-50 overflow-y-auto transition-all duration-700 ease-in-out transform -translate-x-[100%]"
         }
       >
-        <nav className="max-w-[90%] flex flex-col h-full py-2 mx-auto w-full ">
-          <div className="flex items-center mb-8">
+        <nav className="max-w-[90%] flex flex-col h-full  mx-auto w-full  ">
+          <div className="flex-center py-6 border-b border-b-gray-600">
             <div className="mr-auto leading-none">
-              <Image src={""} alt="logo" className="w-[150px]" />
+              <Link href="/">
+                <h1 className="text-2xl font-bold flex-center gap-2">
+                  <TbBrandTorchain className="text-3xl text-accent" />
+                  <span className="text-text-light">
+                    Sulav
+                    <span className=""> Baral</span>
+                  </span>
+                </h1>
+              </Link>
             </div>
-            <button className="navbar-close" onClick={closeNav}>
-              {/* <XMarkIcon className="w-12 h-12 text-accent-1" /> */}x
+            <button className="navbar-close text-accent" onClick={closeNav}>
+              <AiOutlineClose className="w-8 h-8 " />
             </button>
           </div>
 
@@ -94,23 +110,6 @@ export default function MobileMenu(props: { className?: string }) {
                 );
               })}
             </div>
-          </div>
-          <div className="mt-auto">
-            <div className="pt-6">
-              <Link href="/login">
-                <div className="block px-4 py-4 mb-3 text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl">
-                  Sign in
-                </div>
-              </Link>
-              <Link href="/register">
-                <div className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-accent-1 hover:bg-blue-700  rounded-xl">
-                  Sign Up
-                </div>
-              </Link>
-            </div>
-            <p className="my-4 text-xs text-center text-gray-700 ">
-              <span>Copyright © Fatafat Sewa 2021</span>
-            </p>
           </div>
         </nav>
       </div>
