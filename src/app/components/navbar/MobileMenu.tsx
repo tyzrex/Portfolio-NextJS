@@ -36,8 +36,8 @@ export default function MobileMenu(props: { className?: string }) {
   }, [nav]);
 
   return (
-    <header className={props.className}>
-      <div className="w-full items py-5 max-w-layout mx-auto border-b border-b-gray-600">
+    <header className={`${props.className} + navbar`}>
+      <div className="w-full items py-5 max-w-layout mx-auto border-b border-b-gray-600 ">
         <div className="flex justify-between items-center w-full">
           <div className="logo flex justify-center items-center gap-4">
             <Link href="/">

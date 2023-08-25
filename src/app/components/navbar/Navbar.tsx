@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 // import Logo from "@/../public/logo1.webp";
 import Image from "next/image";
@@ -6,14 +8,28 @@ import { Navlinks } from "./Navbardata";
 import { INavlinks } from "./Navbardata";
 import Logo from "@/../public/logo.png";
 import { TbBrandTorchain } from "react-icons/tb";
+import { useEffect } from "react";
 const Navbar = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (navbar) {
+        if (window.scrollY > 0) {
+          navbar.classList.add("bg-main");
+        } else {
+          navbar.classList.remove("bg-black");
+        }
+      }
+    });
+  });
+
   return (
-    <nav>
+    <nav className="sticky top-0 navbar">
       <div
         id="navbar"
-        className="relative z-1 bg-accent-foreground text-text-light justify-center h-[90px] items-center hidden lg:flex max-w-layout border-b border-b-text-light/50"
+        className="relative z-1  text-text-light justify-center h-[90px] items-center hidden lg:flex max-w-layout border-b border-b-text-light/50"
       >
-        <div className="max-w-layout flex justify-center w-full items-center ">
+        <div className="max-w-layout flex justify-center w-full items-center">
           <div className="flex justify-between items-center w-full">
             <div className="logo flex justify-center items-center gap-4">
               <Link prefetch={false} href="/">

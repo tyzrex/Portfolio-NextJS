@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row gap-8 items-center w-full">
           <div className="flex flex-col items-center md:items-start w-full gap-5 text-center md:text-left ">
             <h1 className="font-big font-bold text-text-light">
-              Hi, I'm <span className="text-accent">Sulav</span>
+              Hi, I{"'"}m <span className="text-accent">Sulav</span>
             </h1>
             <div className="text-3xl text-text-light flex-center gap-4 w-full">
               <span className="w-[10%]">
@@ -25,9 +25,9 @@ export default function Hero() {
             </div>
 
             <h3 className="text-gray-400 max-w-[600px] text-lg">
-              I'm a Frontend Developer based in Nepal. I have serious passion
-              for UI effects, animations and creating intuitive, dynamic user
-              experiences.
+              I{"'"}m a Frontend Developer based in Nepal. I have serious
+              passion for UI effects, animations and creating intuitive, dynamic
+              user experiences.
             </h3>
 
             <button
