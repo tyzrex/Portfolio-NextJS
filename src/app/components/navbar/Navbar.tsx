@@ -8,23 +8,34 @@ import { Navlinks } from "./Navbardata";
 import { INavlinks } from "./Navbardata";
 import Logo from "@/../public/logo.png";
 import { TbBrandTorchain } from "react-icons/tb";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const navbar = document.getElementById("navbar");
-      if (navbar) {
-        if (window.scrollY > 0) {
-          navbar.classList.add("bg-main");
-        } else {
-          navbar.classList.remove("bg-black");
-        }
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
       }
-    });
-  });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="sticky top-0 navbar">
+    <nav
+      className={`${
+        scrolling
+          ? "bg-[#1a1a1a] sticky top-0 color-transition"
+          : "bg-transparent color-transition"
+      }
+        `}
+    >
       <div
         id="navbar"
         className="relative z-1  text-text-light justify-center h-[90px] items-center hidden lg:flex max-w-layout border-b border-b-text-light/50"

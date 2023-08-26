@@ -10,9 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         "main" : "#161616",
-        "secondary": "#333333",
+        "secondary": "#1f1f1f",
         "accent": "#86c232",
-        "text-light": "#fff"
+        // "accent": "#3DB2FF",
+        "text-light": "#fff",
+        "orange": "#ffa500",
+        "gray-light": "#9a9a9a"
+        
       },
       screens: {
         "2xl": "1536px",

@@ -4,7 +4,7 @@ import { GoPaperAirplane } from "react-icons/go";
 import { BsMouse, BsArrowDownShort } from "react-icons/bs";
 export default function Hero() {
   return (
-    <section className="max-w-layout">
+    <section className="max-w-layout lg:h-[90vh]">
       <div className="container flex justify-between items-center py-16 md:pt-[10rem] mx-auto md:mx-0">
         <div className="hidden md:flex flex-col gap-8 w-[15%]">
           <FaInstagram className="text-2xl text-white hover:text-accent color-transition cursor-pointer" />
@@ -31,7 +31,7 @@ export default function Hero() {
             </h3>
 
             <button
-              className="w-fit px-6
+              className="w-fit px-6 mt-5 z-0
              py-3 rounded-lg border border-gray-600 text-accent bg-[#1a1a1a] flex-center group
             "
             >
@@ -50,20 +50,20 @@ export default function Hero() {
           "
           >
             <div
-              className="w-[300px] h-[300px] rounded-full bg-white profile__image 
+              className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full bg-white profile__image 
               border-[10px] border-accent flex-center
               "
             ></div>
           </div>
 
           <div className=" flex md:hidden gap-8 ">
-            <FaInstagram className="text-2xl text-accent" />
-            <FiGithub className="text-2xl text-accent" />
-            <FaLinkedinIn className="text-2xl text-accent" />
+            <FaInstagram className="text-2xl text-text-light" />
+            <FiGithub className="text-2xl text-text-light" />
+            <FaLinkedinIn className="text-2xl text-text-light" />
           </div>
         </div>
       </div>
-      <div className="md:mt-20">
+      <div className="my-20">
         <div className="flex-center gap-2">
           <BsMouse className="text-4xl text-accent" />
           <h1 className="text-2xl font-bold text-text-light">Scroll Down</h1>
