@@ -25,14 +25,14 @@ export default function About() {
               </div>
 
               <h3 className="text-gray-400 text-lg">
-                I'm that 3rd year Computer Science student from Tribhuvan
+                I&apos;m a 3rd year Computer Science student from Tribhuvan
                 University, unravelling the art of frontend wizardry. Imagine
-                crafting virtual experiences that sparkle and dance—yep, that's
-                my jam! ✨ My arsenal includes React and Next.js, and currently,
-                I'm interning with React.js conjurers while moonlighting as a
-                Next.js enthusiast.Step into my realm, the portfolio—a
-                collection of spells woven with bits and pixels. Ready to be
-                charmed?
+                crafting virtual experiences that sparkle and dance—yep,
+                that&apos;s my jam! ✨ My arsenal includes React and Next.js,
+                and currently, I&apos;m interning with React.js conjurers while
+                moonlighting as a Next.js enthusiast.Step into my realm, the
+                portfolio—a collection of spells woven with bits and pixels.
+                Ready to be charmed?
               </h3>
             </div>
           </div>
