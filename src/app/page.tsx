@@ -1,14 +1,19 @@
-import About from "./components/about/About";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
+import Hero from './components/hero/Hero';
+import Navbar from './components/navbar/Navbar';
+import Portfolio from './components/Projects/Portfolio';
 
 export default function Home() {
   return (
-    <main className="max-w-layout">
+    <main>
       <Navbar />
-      <Hero />
-      <About />
+      <article className="max-w-layout">
+        <Hero />
+        <About />
+        <Portfolio />
+      </article>
+      <Footer />
     </main>
   );
 }

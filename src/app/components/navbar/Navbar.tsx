@@ -1,14 +1,19 @@
 "use client";
 
-import Link from "next/link";
-// import Logo from "@/../public/logo1.webp";
-import Image from "next/image";
-import MobileMenu from "./MobileMenu";
-import { Navlinks } from "./Navbardata";
-import { INavlinks } from "./Navbardata";
-import Logo from "@/../public/logo.png";
-import { TbBrandTorchain } from "react-icons/tb";
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import Link from 'next/link';
+import { TbBrandTorchain } from 'react-icons/tb';
+
+import MobileMenu from './MobileMenu';
+import {
+  INavlinks,
+  Navlinks,
+} from './Navbardata';
+
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
 
@@ -31,14 +36,17 @@ const Navbar = () => {
     <nav
       className={`${
         scrolling
-          ? "bg-[#1a1a1a] sticky top-0 color-transition"
+          ? "bg-[#1a1a1a] sticky top-0 transition-ll duration-300 ease-in-out border-b border-b-text-light/50"
           : "bg-transparent color-transition"
       }
         `}
     >
       <div
         id="navbar"
-        className="relative z-1  text-text-light justify-center h-[90px] items-center hidden lg:flex max-w-layout border-b border-b-text-light/50"
+        className={
+          `${scrolling ? "" : " border-b border-b-text-light/50"} ` +
+          "relative z-1 max-w-layout text-text-light justify-center h-[90px] items-center hidden lg:flex max-w-layout"
+        }
       >
         <div className="max-w-layout flex justify-center w-full items-center">
           <div className="flex justify-between items-center w-full">
