@@ -2,6 +2,7 @@ import About from "./components/About";
 import Tools from "./components/Lang-and-tools";
 import Hero from "./components/Main-Hero";
 import Projects from "./components/Projects";
+import Socials from "./components/Socials";
 import CustomCursor from "./hoc/Custom-cursor";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Projects />
       <Tools />
+      <Socials />
     </main>
   );
 }

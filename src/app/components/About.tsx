@@ -3,7 +3,11 @@ export default function About() {
     <>
       <section>
         <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8 py-24">
-          <h1 className="text text-[80px]">
+          <h1
+            className="text
+            xl:text-[80px] text-[40px] md:text-[50px]   
+          "
+          >
             About Me
             <span>SELF-SUMMARY</span>
           </h1>

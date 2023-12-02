@@ -3,7 +3,11 @@ export default function Projects() {
     <>
       <section className="py-24">
         <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8">
-          <h1 className="text text-[80px]">
+          <h1
+            className="text 
+            text-[40px] md:text-[50px] xl:text-[80px]
+          "
+          >
             Projects
             <span>MY WORKS</span>
           </h1>
