@@ -48,10 +48,10 @@ export default function About() {
                   INTRODUCTION
                 </h1>
                 <p className="text-xl mt-5 text-orange-100/80 sm:text-xl">
-                  I'm a 3rd year Computer Science student from Tribhuvan
+                  I&apos;m a 3rd year Computer Science student from Tribhuvan
                   University, unravelling the art of frontend wizardry. Imagine
                   crafting virtual experiences that sparkle and dance—yep,
-                  that's my jam! My arsenal includes React and Next.js
+                  that&apos;s my jam! My arsenal includes React and Next.js
                 </p>
               </div>
             </div>

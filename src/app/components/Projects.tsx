@@ -1,5 +1,3 @@
-import ProjectCard from "./ProjectCard";
-
 export default function Projects() {
   return (
     <>
@@ -10,12 +8,12 @@ export default function Projects() {
             <span>MY WORKS</span>
           </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 mt-20">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 mt-20">
             <ProjectCard label="BetterBikes" href="/tyzrex/BetterBikes" />
             <ProjectCard label="ICT Meetup v7" href="/tyzrex/Ict" />
             <ProjectCard label="My Anime Dev" href="/tyzrex/SulavBaral.com" />
             <ProjectCard label="SulavBaral.com" href="/tyzrex/SulavBaral.com" />
-          </div>
+          </div> */}
         </div>
       </section>
     </>

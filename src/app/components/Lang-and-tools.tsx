@@ -42,8 +42,11 @@ export default function Tools() {
                 Languages and Frameworks
               </h2>
               <div className="flex flex-wrap gap-5 mt-5">
-                {Frontend.map((item) => (
-                  <div className="bg-orange-100/20 rounded-xl p-3 flex items-center justify-center">
+                {Frontend.map((item, idx: number) => (
+                  <div
+                    key={idx}
+                    className="bg-orange-100/20 rounded-xl p-3 flex items-center justify-center"
+                  >
                     <p className="text-xl text-orange-100">{item}</p>
                   </div>
                 ))}
@@ -53,8 +56,11 @@ export default function Tools() {
                 Software
               </h2>
               <div className="flex flex-wrap gap-5 mt-5">
-                {Software.map((item) => (
-                  <div className="bg-orange-100/20 rounded-xl p-3 flex items-center justify-center">
+                {Software.map((item, idx: number) => (
+                  <div
+                    key={idx}
+                    className="bg-orange-100/20 rounded-xl p-3 flex items-center justify-center"
+                  >
                     <p className="text-xl text-orange-100">{item}</p>
                   </div>
                 ))}
