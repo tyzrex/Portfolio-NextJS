@@ -43,7 +43,7 @@ const CustomCursor = () => {
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
     };
-  }, []);
+  }, [onMouseMove]);
 
   return (
     <div
