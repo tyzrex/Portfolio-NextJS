@@ -1,19 +1,17 @@
-import About from './components/about/About';
-import Footer from './components/footer/Footer';
-import Hero from './components/hero/Hero';
-import Navbar from './components/navbar/Navbar';
-import Portfolio from './components/Projects/Portfolio';
+import About from "./components/About";
+import Tools from "./components/Lang-and-tools";
+import Hero from "./components/Main-Hero";
+import Projects from "./components/Projects";
+import CustomCursor from "./hoc/Custom-cursor";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <article className="max-w-layout">
-        <Hero />
-        <About />
-        <Portfolio />
-      </article>
-      <Footer />
+    <main className="overflow-x-hidden">
+      <CustomCursor />
+      <Hero />
+      <About />
+      <Projects />
+      <Tools />
     </main>
   );
 }
