@@ -2,6 +2,79 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
 * {
   padding: 0;
@@ -11,13 +84,21 @@
 
 body {
   --dot-bg: #161616;
-  --dot-color: #534d4d;
+  --dot-color: #848282;
   --dot-size: 1px;
-  --dot-space: 26px;
+  --dot-space: 50px;
   background:
     linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
     linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
     var(--dot-color);
+
+}
+
+.dotted-background{
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
 }
 
 /* layouts designs and typography */
@@ -99,24 +180,6 @@ body {
 }
 
 
-@keyframes profile__animation {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
-
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-  }
-
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
-}
-
-.profile__image {
-  animation: profile__animation 8s ease-in-out infinite 1s;
-}
-
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -147,11 +210,11 @@ body {
   &:after{
     content: '';
     position: absolute;
-    bottom: 0;
     left: 50%;
+    top: 100%;
     width: 0;
-    height: 2px;
-    background-color: #c7ff1b;
+    height: 2px; 
+    background-color: rgb(255 237 213);
     transition: all 0.3s ease-in-out;
   }
 
@@ -161,16 +224,99 @@ body {
   }
 
   &:active:after {
-    width: 100%;
+    width: 120%;
     left: 0;
   }
 
   &:hover {
-    color: #c7ff1b;
+    color: rgb(255 237 213)
   }
 
   &:active {
-    color: #c7ff1b;
+    color: rgb(255 237 213)
   }
 }
 
+#checkbox {
+  display: none;
+}
+
+.card-background{
+  background-image: linear-gradient(120deg,#3734345d 0%, #06050561 100%);
+  border : 1px solid rgba(255, 237, 213, 0.171);
+}
+
+
+.text {
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  line-height: 100%;
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  color: rgba(255, 237, 213, 0.7);
+  background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1, .5, .5, 1) 0.5s;
+  border-bottom: 1px solid #5b544e;
+
+  //how to get gap between the text and border
+  padding-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 237 213);
+  color: #0D0D0D;
+
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(.1, .5, .5, 1) 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text:hover>span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference; // This will invert colors
+  border: 2px solid rgb(255 237 213); // et cursor color
+
+  transition: transform 0.1s ease, opacity 0.1s ease;
+    transform: translate3d(-50%, -50%, 0);
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.inverted {
+  // Your styling for inverted text
+  color: #fff;
+}
