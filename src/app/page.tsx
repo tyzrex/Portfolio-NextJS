@@ -1,3 +1,4 @@
+import ScrollProgress from "./components/_small_components/Scroll-Progress";
 import About from "./components/About";
 import Tools from "./components/Lang-and-tools";
 import Hero from "./components/Main-Hero";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <CustomCursor />
+      <ScrollProgress />
       <Hero />
       <About />
       <Projects />
