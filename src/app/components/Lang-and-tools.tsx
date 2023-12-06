@@ -1,3 +1,5 @@
+import SectionHeader from "./_small_components/Section-Header";
+
 const Frontend = [
   "Javascript",
   "React",
@@ -30,14 +32,7 @@ export default function Tools() {
     <>
       <section>
         <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8 py-24">
-          <h1
-            className="text 
-            text-[40px] md:text-[50px] xl:text-[80px]
-          "
-          >
-            Language and Tools
-            <span>MY TECH STACK</span>
-          </h1>
+          <SectionHeader text="Languages and Tools" />
 
           <div className="mt-20 grid gap-6 grid-cols-1 items-center ">
             <div className="card-background px-5 xl:px-10 py-10 h-auto rounded-2xl shadow-lg border border-gray-300">

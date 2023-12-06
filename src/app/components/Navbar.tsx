@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 import MobileMenu from "./Mobile-Menu";
@@ -14,7 +16,16 @@ export default function Navbar() {
   return (
     <>
       <header>
-        <div className="mx-auto max-w-screen-2xl px-10 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: -180 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.8,
+            delay: 0,
+          }}
+          className="mx-auto max-w-screen-2xl px-10 sm:px-6 lg:px-8"
+        >
           <div className="flex h-24 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
               <Link className="block text-orange-100" href="/">
@@ -54,7 +65,7 @@ export default function Navbar() {
               <MobileMenu />
             </div>
           </div>
-        </div>
+        </motion.div>
       </header>
     </>
   );
