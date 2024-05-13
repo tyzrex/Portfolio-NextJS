@@ -6,6 +6,7 @@ import { Outfit } from "next/font/google";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import SmoothScroll from "./hoc/SmoothScroll";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const outfit = Outfit({
   weight: "400",
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SmoothScroll>
-        <body className={outfit.className}>
+        <body className={`${outfit.className}`}>
           <Navbar />
           {children}
           <Footer />

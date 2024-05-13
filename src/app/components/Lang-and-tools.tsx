@@ -31,7 +31,7 @@ export default function Tools() {
   return (
     <>
       <section>
-        <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full max-w-layout  py-24">
           <SectionHeader text="Languages and Tools" />
 
           <div className="mt-20 grid gap-6 grid-cols-1 items-center ">

@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <>
       <section className="py-24">
-        <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-layout ">
           <SectionHeader text="Projects" />
 
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 mt-20">

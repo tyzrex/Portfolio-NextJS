@@ -4,7 +4,7 @@ export default function Socials() {
   return (
     <>
       <section className="py-24">
-        <div className="mx-auto w-full max-w-screen-2xl px-10 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-layout ">
           <SectionHeader text="Socials" />
 
           <div className="grid grid-cols-2 gap-10 mt-20">
